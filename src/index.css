@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Open Sans";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000 !important;
+}
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    top: 0;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.6) 20%,transparent);
+    transition: all .2s ease-out;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 150px;
+}
+
+.navbar-container ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-container li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    background: #141414;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.banner-section {
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.6) 20%,transparent);
+    z-index: 0;
+}
+
+.banner-content {
+    width: 40%;
+}
+
+.banner-content h1 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.movie-description {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+}
+
+.action-button button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    font-size: 15px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 0;
+    margin-top: 1em;
+    transition: all .2s ease-out;
+    margin-right: 10px;
+}
+
+.action-button button span{
+  margin-left:7px;
+}
+
+.modal-header {
+    flex-wrap: wrap;
+    border-bottom: 0px !important;
+}
+
+.modal-content {
+    background-color: #181818 !important;
+}
+
+.modal-content .btn-close {
+    position: relative;
+    top: -50%;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 1;
+}
+
+.modal-image {
+    height: 330px;
+    background-size: cover;
+}
+
+.modal-image-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.3) 0%,transparent);
+    z-index: 0;
+}
+
+.modal-title {
+    color: #fff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.modal-header-description {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.modal-detail-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.modal-detail-attribute ul {
+    padding-left:0px;
+}
+
+.modal-detail-attribute li {
+    color: #777;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.modal-detail-attribute li span {
+    color: #fff;
+}
+
+/* .poster-container {
+    display:flex;
+} */
+
+/* .poster-container .poster-block {
+    width: 226.333px;
+    height:126px;
+} */
+
+.poster-block img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.poster-block h3 {
+    font-size: 16px;
+    color: #fff;
+}
