@@ -59,7 +59,7 @@ function PosterContainer({ api, title }) {
                                 </div>
 
                                 <div className="poster-details">
-                                    <h3>{movie.title}</h3>
+                                    <h3>{movie.title ?? movie.original_title ?? movie.name}</h3>
 
                                     <PosterModal
                                         movieDetail={movie}

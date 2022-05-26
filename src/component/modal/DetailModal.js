@@ -30,10 +30,10 @@ function DetailModal({movieDetail}) {
                 <div className="modal-image-overlay"></div>
 
                 <Modal.Body>
-                    <Modal.Title>{movieDetail.name}</Modal.Title>
+                    <Modal.Title>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</Modal.Title>
                     <div className="modal-header-description">{movieDetail.overview}</div>
                     
-                    <div className="modal-detail-title">Info on <b>{movieDetail.name}</b></div>
+                    <div className="modal-detail-title">Info on <b>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</b></div>
 
                     <div className="modal-detail-attribute">
                         <ul>

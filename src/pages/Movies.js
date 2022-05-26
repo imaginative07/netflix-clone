@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
         <Header />
-        <Banner api={requests.fetchNetflixOriginals} />
+        <Banner api={requests.fetchTrendingMovies} />
         <PosterContainer title="Trending Now" api={requests.fetchTrendingMovies} />
         <PosterContainer title="Top Rated" api={requests.fetchTopRated} />
         <PosterContainer title="Upcoming" api={requests.fetchUpcomingMovies} />

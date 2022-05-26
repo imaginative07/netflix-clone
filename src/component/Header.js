@@ -18,13 +18,13 @@ function Header() {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="">TV Series</Link>
+                                <Link to="/tvseries">TV Series</Link>
                             </li>
                             <li>
-                                <Link to="">Movies</Link>
+                                <Link to="/movies">Movies</Link>
                             </li>
                             <li>
-                                <Link to="">New & Popular</Link>
+                                <Link to="/popular">New & Popular</Link>
                             </li>
                             <li>
                                 <Link to="">My List</Link>

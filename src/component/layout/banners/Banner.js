@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import instance from "../axiosBase";
-import { BASE_IMG_URL } from '../Request';
-import DetailModal from './modal/DetailModal';
+import instance from "../../../axiosBase";
+import { BASE_IMG_URL } from '../../../Request';
+import DetailModal from '../../modal/DetailModal';
 
 function Banner({ api }) {
     const [banner, setBanner] = useState([]);
@@ -28,7 +28,7 @@ function Banner({ api }) {
 
                 <div className="row banner-content px-5 mx-5">
                     
-                    <h1>{banner.name}</h1>
+                    <h1>{banner.name ?? banner.original_title}</h1>
 
                     <div className="action-button">
                         <DetailModal movieDetail={banner}/>
