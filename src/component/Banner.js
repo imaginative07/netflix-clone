@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import instance from "../axiosBase";
 import { BASE_IMG_URL } from '../Request';
-import DetailModal from './DetailModal';
+import DetailModal from './modal/DetailModal';
 
 function Banner({ api }) {
     const [banner, setBanner] = useState([]);
@@ -24,30 +24,22 @@ function Banner({ api }) {
             
             <div className="banner-overlay"></div>
 
-            <div className="container banner-section">
-                <div className="row banner-content">
+            <div className="container-fluid banner-section">
+
+                <div className="row banner-content px-5 mx-5">
+                    
                     <h1>{banner.name}</h1>
 
                     <div className="action-button">
-                        
                         <DetailModal movieDetail={banner}/>
-
-                        {/* <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <FaPlay color="white" onClick={handleShow} /> <span>Play</span>
-                        </button>
-
-                        <button type="button" className="btn btn-secondary">
-                            <FaExclamation color="white" /> <span>More info</span>
-                        </button> */}
                     </div>
 
                     <p className="movie-description mt-3">
                         {banner.overview}
                     </p>
 
-                    {/* <DetailModal /> */}
-
                 </div>
+
             </div>
 
         </div>

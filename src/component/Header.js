@@ -6,8 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Header() {
     return (
         <div className="header-container">
-            <div className="container">
-                <header className="row">
+            <div className="container-fluid">
+                <header className="row px-5 mx-5">
                     <div className="logo col-2">
                         <img src={Logo} alt="Netflix" />
                     </div>

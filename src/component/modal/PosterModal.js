@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { Button, Modal } from "react-bootstrap";
-import { FaPlay, FaExclamation } from "react-icons/fa";
-import { BASE_IMG_URL } from '../Request';
+import { Modal } from "react-bootstrap";
+import { BASE_IMG_URL } from '../../Request';
+import { FaPlay, FaPlus } from "react-icons/fa";
 
 function DetailModal({movieDetail}) {
     const [show, setShow] = useState(false);
@@ -12,29 +12,26 @@ function DetailModal({movieDetail}) {
 
     return (
         <>
-            <Button
-                type="button"
-                className="btn btn-danger"
-            >
-                <FaPlay color="white" /> <span>Play</span>
-            </Button>
+            <a type="button" className="poster-button">
+                <FaPlay color="black" />
+            </a>
 
-            <Button type="button" className="btn btn-secondary" onClick={handleShow}>
-                <FaExclamation color="white" /> <span>More info</span>
-            </Button>
+            <a
+                type="button"
+                className="poster-button"
+                onClick={handleShow}
+            >
+                <FaPlus color="black" />
+            </a>
 
             <Modal show={show} onHide={handleClose}>
 
                 <Modal.Header className="modal-image" closeButton style={{backgroundImage: `url(${BASE_IMG_URL}${movieDetail.backdrop_path})`}}></Modal.Header>
+                
                 <div className="modal-image-overlay"></div>
 
-                {/* <div className="modal-image" style={{backgroundImage: `url(${BASE_IMG_URL}${movieDetail.backdrop_path})`}}> */}
-                    {/* <h2>{movieDetail.name}</h2>
-                    <h4>{movieDetail.overview}</h4>
-                </div> */}
-
                 <Modal.Body>
-                    <Modal.Title>{movieDetail.name}</Modal.Title>
+                    <Modal.Title>{movieDetail.title}</Modal.Title>
                     <div className="modal-header-description">{movieDetail.overview}</div>
                     
                     <div className="modal-detail-title">Info on <b>{movieDetail.name}</b></div>

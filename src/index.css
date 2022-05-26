@@ -176,14 +176,48 @@ body {
     color: #fff;
 }
 
-/* .poster-container {
-    display:flex;
-} */
+.poster-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
-/* .poster-container .poster-block {
-    width: 226.333px;
-    height:126px;
-} */
+.poster-container h1 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.poster-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-block img{
+    transition: 0.3s ease-in all;
+}
+
+.poster-block:hover img {
+    background-image: linear-gradient(180deg,rgba(0,0,0,.3) 0%,transparent);
+    transform: scale(1.2);
+    transition: 0.3s linear all;
+}
+
+.poster-block:hover .poster-details {
+    opacity: 1;
+}
+
+.poster-details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: 0.3s linear all;
+    z-index: 1;
+}
+
+.poster-details a {
+    margin-right: 10px;
+}
 
 .poster-block img {
     height: 100%;
@@ -194,4 +228,34 @@ body {
 .poster-block h3 {
     font-size: 16px;
     color: #fff;
+}
+
+.poster-button {    
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 5px 0.6em 0;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    transition: all .3s ease-out;
+    outline: none;
+}
+
+.poster-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(1turn,rgba(0,0,0,.6),transparent 100%);
+    z-index: 0;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.poster-block:hover .poster-overlay {
+    opacity: 1;
+    transition: all .3s ease-out;
 }
