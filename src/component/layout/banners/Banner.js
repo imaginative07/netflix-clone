@@ -31,7 +31,7 @@ function Banner({ api }) {
                     <h1>{banner.name ?? banner.original_title}</h1>
 
                     <p className="movie-description mt-3">
-                         {banner.overview}
+                        {banner.overview}
                     </p>
 
                     <div className="action-button">
