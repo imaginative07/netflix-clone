@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import instance from "../../../axiosBase";
-import { BASE_IMG_URL } from '../../../Request';
+import instance from "../../../service/axiosBase";
+import { BASE_IMG_URL } from '../../../service/Request';
 import DetailModal from '../../modal/DetailModal';
 
 function Banner({ api }) {

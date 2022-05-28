@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Modal } from "react-bootstrap";
-import { BASE_IMG_URL } from '../../Request';
+import { BASE_IMG_URL } from '../../service/Request';
 import { FaPlay, FaPlus } from "react-icons/fa";
 
 function DetailModal({movieDetail}) {
