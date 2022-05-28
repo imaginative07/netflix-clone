@@ -19,8 +19,6 @@ function Banner({ api }) {
         fetchBanner();
     }, [api]);
 
-    const overview  = banner.overview;
-
     return (
         <div className="banner" style={{backgroundImage: `url(${BASE_IMG_URL}${banner.backdrop_path})`}}>
             
@@ -37,8 +35,7 @@ function Banner({ api }) {
                     </div>
 
                     <p className="movie-description mt-3">
-                        
-                        {overview}
+                         {banner.overview}
                     </p>
 
                 </div>
