@@ -6,18 +6,18 @@ import DetailModal from '../../modal/DetailModal';
 function Banner({ api }) {
     const [banner, setBanner] = useState([]);
 
-    const fetchBanner = async () => {
-        const response = await instance.get(api);
-        const data = await response;
-        const randomResult = Math.floor(
-            Math.random() * data.data.results.length - 1
-        );
-        setBanner(data.data.results[randomResult]);
-    };
-
     useEffect(() => {
+        const fetchBanner = async () => {
+            const response = await instance.get(api);
+            const data = await response;
+            const randomResult = Math.floor(
+                Math.random() * data.data.results.length - 1
+            );
+            setBanner(data.data.results[randomResult]);
+        };
+
         fetchBanner();
-    }, []);
+    }, [api]);
 
     const overview  = banner.overview;
 

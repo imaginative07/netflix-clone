@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import instance from "../axiosBase";
+import instance from "../../axiosBase";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { BASE_IMG_URL } from "../Request";
-import PosterModal from "./modal/PosterModal";
+import { BASE_IMG_URL } from "../../Request";
+import PosterModal from "../modal/PosterModal";
 
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,20 +10,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-
 function PosterContainer({ api, title }) {
 
-    const [movies, setMovies] = useState([]);    
-
-    const fetchMovies = async () => {
-        const response = await instance.get(api);
-        const data = await response;
-        setMovies(data.data.results);
-    };
+    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
+        const fetchMovies = async () => {
+            const response = await instance.get(api);
+            const data = await response;
+            setMovies(data.data.results);
+        };
+
         fetchMovies();
-    }, []);
+    }, [api]);
 
     return (
         <div className="poster-container container-fluid mb-5">

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../component/Header';
+import Header from '../component/layout/Header';
 import Banner from '../component/layout/banners/Banner';
 import requests from "../Request";
-import PosterContainer from '../component/PosterContainer';
+import PosterContainer from '../component/layout/PosterContainer';
 
 function Home() {
   return (

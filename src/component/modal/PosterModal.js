@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Modal } from "react-bootstrap";
 import { BASE_IMG_URL } from '../../Request';
