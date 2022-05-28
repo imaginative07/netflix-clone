@@ -30,13 +30,13 @@ function Banner({ api }) {
                     
                     <h1>{banner.name ?? banner.original_title}</h1>
 
-                    <div className="action-button">
-                        <DetailModal movieDetail={banner}/>
-                    </div>
-
                     <p className="movie-description mt-3">
                          {banner.overview}
                     </p>
+
+                    <div className="action-button">
+                        <DetailModal movieDetail={banner}/>
+                    </div>
 
                 </div>
 
