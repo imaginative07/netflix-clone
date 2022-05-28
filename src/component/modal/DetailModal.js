@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "bootstrap/dist/js/bootstrap.min.js";
 import { Button, Modal } from "react-bootstrap";
 import { FaPlay, FaExclamation } from "react-icons/fa";
 import { BASE_IMG_URL } from '../../service/Request';

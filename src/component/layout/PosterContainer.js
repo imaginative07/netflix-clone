@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import instance from "../../service/axiosBase";
-import "bootstrap/dist/js/bootstrap.min.js";
 import { BASE_IMG_URL } from "../../service/Request";
 import PosterModal from "../modal/PosterModal";
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "bootstrap/dist/js/bootstrap.min.js";
 import { Modal } from "react-bootstrap";
-import { BASE_IMG_URL } from '../../service/Request';
+import { BASE_IMG_URL } from "../../service/Request";
 import { FaPlay, FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function DetailModal({movieDetail}) {
+function DetailModal({ movieDetail }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -13,40 +13,78 @@ function DetailModal({movieDetail}) {
 
     return (
         <>
-            <a type="button" className="poster-button" onClick={handlePlay}>
+            <Link
+                to=""
+                type="button"
+                className="poster-button"
+                onClick={handlePlay}
+            >
                 <FaPlay color="black" />
-            </a>
+            </Link>
 
-            <a
+            <Link
+                to=""
                 type="button"
                 className="poster-button"
                 onClick={handleShow}
             >
                 <FaPlus color="black" />
-            </a>
+            </Link>
 
             <Modal show={show} onHide={handleClose}>
+                <Modal.Header
+                    className="modal-image"
+                    closeButton
+                    style={{
+                        backgroundImage: `url(${BASE_IMG_URL}${movieDetail.backdrop_path})`,
+                    }}
+                ></Modal.Header>
 
-                <Modal.Header className="modal-image" closeButton style={{backgroundImage: `url(${BASE_IMG_URL}${movieDetail.backdrop_path})`}}></Modal.Header>
-                
                 <div className="modal-image-overlay"></div>
 
                 <Modal.Body>
-                    <Modal.Title>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</Modal.Title>
-                    
-                    <div className="modal-header-description">{movieDetail.overview}</div>
-                    
-                    <div className="modal-detail-title">Info on <b>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</b></div>
+                    <Modal.Title>
+                        {movieDetail.title ??
+                            movieDetail.original_title ??
+                            movieDetail.name}
+                    </Modal.Title>
+
+                    <div className="modal-header-description">
+                        {movieDetail.overview}
+                    </div>
+
+                    <div className="modal-detail-title">
+                        Info on{" "}
+                        <b>
+                            {movieDetail.title ??
+                                movieDetail.original_title ??
+                                movieDetail.name}
+                        </b>
+                    </div>
 
                     <div className="modal-detail-attribute">
                         <ul>
-                            <li>First air date: <span>{movieDetail.first_air_date || "Not available"}</span></li>
-                            <li>Average vote: <span>{movieDetail.vote_average || "Not available"}</span></li>
-                            <li>Language: <span>{movieDetail.original_language}</span></li>
+                            <li>
+                                First air date:{" "}
+                                <span>
+                                    {movieDetail.first_air_date ||
+                                        "Not available"}
+                                </span>
+                            </li>
+                            <li>
+                                Average vote:{" "}
+                                <span>
+                                    {movieDetail.vote_average ||
+                                        "Not available"}
+                                </span>
+                            </li>
+                            <li>
+                                Language:{" "}
+                                <span>{movieDetail.original_language}</span>
+                            </li>
                         </ul>
                     </div>
                 </Modal.Body>
-
             </Modal>
         </>
     );
