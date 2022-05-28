@@ -28,14 +28,16 @@ function Banner({ api }) {
 
                 <div className="row banner-content px-5 mx-5">
                     
-                    <h1>{banner.name ?? banner.original_title}</h1>
+                    <h1>
+                        {banner.name ?? banner.original_title}
+                    </h1>
 
                     <p className="movie-description mt-3">
                         {banner.overview}
                     </p>
 
                     <div className="action-button">
-                        <DetailModal movieDetail={banner}/>
+                        <DetailModal movieDetail={banner} />
                     </div>
 
                 </div>
