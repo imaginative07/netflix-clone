@@ -37,9 +37,15 @@ function PosterContainer({ api, title }) {
                     className="mySwiper"
                     breakpoints={{
                         // when window width is >= 640px
+                        480: {
+                            width: 480,
+                            slidesPerView: 2,
+                        },
+
+                        // when window width is >= 640px
                         640: {
                             width: 640,
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                         },
                         // when window width is >= 768px
                         768: {

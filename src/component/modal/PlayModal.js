@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
+import { FaPlay, FaExclamation } from "react-icons/fa";
 import { BASE_IMG_URL } from '../../Request';
-import { FaPlay, FaPlus } from "react-icons/fa";
 
 function DetailModal({movieDetail}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const handlePlay = () => setShow(true);
 
     return (
         <>
-            <a type="button" className="poster-button" onClick={handlePlay}>
-                <FaPlay color="black" />
-            </a>
-
-            <a
+            <Button
                 type="button"
-                className="poster-button"
-                onClick={handleShow}
+                className="btn btn-danger"
             >
-                <FaPlus color="black" />
-            </a>
+                <FaPlay color="white" /> <span>Play</span>
+            </Button>
+
+            <Button type="button" className="btn btn-secondary" onClick={handleShow}>
+                <FaExclamation color="white" /> <span>More info</span>
+            </Button>
 
             <Modal show={show} onHide={handleClose}>
 
@@ -33,7 +31,6 @@ function DetailModal({movieDetail}) {
 
                 <Modal.Body>
                     <Modal.Title>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</Modal.Title>
-                    
                     <div className="modal-header-description">{movieDetail.overview}</div>
                     
                     <div className="modal-detail-title">Info on <b>{movieDetail.title ?? movieDetail.original_title ?? movieDetail.name}</b></div>
